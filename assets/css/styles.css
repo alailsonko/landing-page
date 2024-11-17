@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Smooth white background */
+    color: #333; /* Text color */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5; /* Smooth white background */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: rgba(245, 245, 245, 0.8); /* Smooth white with 80% opacity */
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-links li:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+    color: #333; /* Separator color */
+}
+
+.nav-links a {
+    color: #333; /* Dark text color for contrast */
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #e0e0e0; /* Slightly darker for hover effect */
+    border-radius: 4px;
+}
+
+.content {
+    padding-top: 60px; /* Adjust based on navbar height */
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-message {
+    position: absolute;
+    top: -100px; /* Start off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+    transition: top 1s ease-in-out;
+}
+
+.hero-message.show {
+    top: 50%; /* Slide to the middle */
+    transform: translate(-50%, -50%);
+}
