@@ -13,3 +13,15 @@ document.addEventListener('scroll', function() {
         navbar.classList.remove('scrolled');
     }
 });
+
+window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    var fixedNavbar = document.querySelector('.fixed-navbar');
+    var navbarHeight = navbar.offsetHeight;
+
+    if (window.scrollY > navbarHeight) {
+        fixedNavbar.style.display = 'block';
+    } else {
+        fixedNavbar.style.display = 'none';
+    }
+});

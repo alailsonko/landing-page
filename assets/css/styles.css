@@ -5,20 +5,25 @@ body {
     color: #333; /* Text color */
 }
 
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 10px 20px; /* Optional: Add some padding for better spacing */
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f5f5f5; /* Smooth white background */
     padding: 10px 20px;
-    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     transition: background-color 0.3s, opacity 0.3s;
 }
 
-.navbar.scrolled {
+.fixed-inner-navbar.scrolled {
     background-color: rgba(245, 245, 245, 0.8); /* Smooth white with 80% opacity */
 }
 
@@ -34,15 +39,13 @@ body {
 }
 
 .nav-links li {
-    margin-left: 20px;
     position: relative;
+    border-right: 1px solid rgba(0,0,0,.05);
+    padding: 16px;
 }
 
-.nav-links li:not(:last-child)::after {
-    content: "|";
-    position: absolute;
-    right: -10px;
-    color: #333; /* Separator color */
+.nav-links li:last-child {
+    border-right: none;
 }
 
 .nav-links a {
@@ -52,13 +55,13 @@ body {
     transition: background-color 0.3s;
 }
 
-.nav-links a:hover {
-    background-color: #e0e0e0; /* Slightly darker for hover effect */
-    border-radius: 4px;
+.nav-links a:hover,
+.nav-links a:active {
+    color: #825339;
 }
 
-.content {
-    padding-top: 60px; /* Adjust based on navbar height */
+.nav-links a.active {
+    color: #825339;
 }
 
 .hero {
@@ -76,18 +79,139 @@ body {
 
 .hero-message {
     position: absolute;
-    top: -100px; /* Start off-screen */
+    top: -120px; /* Start off-screen */
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     color: white;
     padding: 20px;
-    font-size: 24px;
+    font-size: 46px;
     text-align: center;
     transition: top 1s ease-in-out;
+    font-weight: 400;
+    line-height: 46px;
+    font-family: "Patua One";
+    max-width: 400px;
+    text-align: left;
 }
 
 .hero-message.show {
-    top: 50%; /* Slide to the middle */
+    top: 25%; /* Slide to the middle */
     transform: translate(-50%, -50%);
+}
+
+.fixed-navbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* 80% opacity */
+    z-index: 1000;
+    transition: all 2.0s ease-in-out;
+}
+
+.fixed-inner-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    /* transition: background-color 0.3s, opacity 0.3s; */
+}
+
+.fixed-navbar .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cover-text {
+    font-family: "Patua One";
+    font-size: 42px;
+    line-height: 42px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #444444; /* Adjust text color as needed */
+    padding: 10px; /* Optional: Add padding for better readability */
+}
+
+.cover-container {
+    position: relative;
+    text-align: center; /* Center the text horizontally */
+}
+
+.cover-image {
+    width: 100%;
+    height: auto;
+}
+
+.icons-container {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Adjust gap as needed */
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.icon-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.icon-item img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 20px; /* Space between icon and text */
+}
+
+.icon-content h3 {
+    margin-top: 0;
+    font-size: 1.2em; /* Adjust font size as needed */
+}
+
+.icon-content p {
+    margin-top: 5px;
+    font-size: 1em; /* Adjust font size as needed */
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between image and content */
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.about-image img {
+    width: 450px; /* Adjust size as needed */
+    height: 350px;
+}
+
+.about-content {
+    flex: 1; /* Take up remaining space */
+}
+
+.about-content h2 {
+    font-family: "Patua One";
+    margin-top: 0;
+    font-size: 2em; /* Adjust font size as needed */
+}
+
+.about-content p {
+    font-family: "Patua One";
+    margin-top: 10px;
+    font-size: 1em; /* Adjust font size as needed */
+}
+
+.extra-mile {
+    font-family: "Patua One";
+    margin-top: 10px;
+    font-weight: bold; /* Optional: Make the text bold */
 }
