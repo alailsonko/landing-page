@@ -25,3 +25,21 @@ window.addEventListener('scroll', function() {
         fixedNavbar.style.display = 'none';
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+});
