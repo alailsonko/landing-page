@@ -1,0 +1,118 @@
+<style>
+    .testimonial-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.testimonial-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-wrapper h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.testimonial-intro {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 40px;
+}
+
+.testimonial-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-image img {
+  border-radius: 50%;
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  border: 3px solid #007BFF;
+}
+
+.testimonial-content blockquote {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.testimonial-content blockquote p {
+  quotes: "“" "”" "‘" "’";
+}
+.testimonial-content blockquote p:before {
+  content: open-quote;
+  font-size: 2em;
+  line-height: 0;
+  vertical-align: -0.4em;
+  margin-right: 10px;
+  color: #007BFF;
+}
+.testimonial-content blockquote p:after {
+  content: close-quote;
+  font-size: 2em;
+  line-height: 0;
+  vertical-align: -0.4em;
+  margin-left: 10px;
+  color: #007BFF;
+}
+
+.testimonial-content footer {
+  text-align: center;
+  color: #333;
+  font-size: 0.9em;
+}
+.testimonial-content footer strong {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+.testimonial-content footer em {
+  color: #777;
+  font-style: normal;
+}
+
+</style>
+
+<section class="testimonial-section">
+    <div class="testimonial-wrapper">
+      <h2>When Clients Become Friends</h2>
+      <p class="testimonial-intro">Our greatest satisfaction is seeing how our clients become part of our extended family. Here are some of their stories.</p>
+      
+      <div class="testimonials-grid">
+        {% for t in site.data.testimonials %}
+        <article class="testimonial-item">
+          <!-- <figure class="testimonial-image">
+            <img src="{{ t.image | relative_url }}" alt="Photo of {{ t.name }}">
+          </figure> -->
+          <div class="testimonial-content">
+            <blockquote>
+              <p>{{ t.content }}</p>
+            </blockquote>
+            <footer>
+              <strong>{{ t.name }}</strong><br>
+              <em>{{ t.location }}</em>
+            </footer>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  

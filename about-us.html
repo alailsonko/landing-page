@@ -4,8 +4,275 @@ title: About Us
 permalink: /about-us/
 ---
 
-<!-- Your page content here -->
-<div class="about-page">
-    <h1>About Us</h1>
-    <p>Your content goes here...</p>
+<style>
+  #contact-header {
+    text-align: center;
+    color: #825339;
+  }
+
+  .container-section-wrapper {
+    display: flex!important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .address-contact, #contact-content, .additional-info {
+    flex: 1;
+    min-width: 0; /* Ensures flex items shrink properly */
+  }
+
+  .contact-section {
+    background: url('{{ '/assets/images/cover-image.png' | relative_url }}') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 60px 20px;
+  }
+  .contact-section h2, .contact-section h3 {
+    font-family: 'Patua One', sans-serif;
+  }
+  .contact-section address, .contact-section p {
+    font-size: 1.1em;
+  }
+  .contact-form-container {
+    /* background: rgba(0, 0, 0, 0.7); */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .contact-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .contact-form-container input, .contact-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  .contact-form-container button {
+    background-color: #825339;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .contact-form-container button:hover {
+    background-color: #a65b3f;
+  }
+  .additional-info {
+    margin-top: 20px;
+  }
+  .address-contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 0; /* Ensures flex items shrink properly */
+  }
+
+  h3, p, address, label {
+    color: #444444;
+  }
+</style>
+
+<div id="Subheader">
+  <h1>About Us</h1>
 </div>
+<div class="cover-container">
+    <img src="{{ '/assets/images/cover-image.png' | relative_url }}" alt="Cover Image" class="cover-image">
+    <div class="overlay-content">
+      <img src="https://expatmile.com/wp-content/uploads/2023/07/Bird-300x196.png" alt="Bird Image">
+      <h3>Our Team</h3>
+    </div>
+</div>
+<section class="team-section">
+  <div class="team-container">
+    <!-- Team Member 1: Rita Seara -->
+    <article class="team-member">
+      <figure class="team-member__image">
+        <img
+          src="https://expatmile.com/wp-content/uploads/2024/02/Rita-Seara-Expat-Mile-Feb.-9.-24.jpg#228"
+          alt="Portrait of Rita Seara in a white suit"
+          width="841"
+          height="1120"
+          loading="lazy"
+        >
+      </figure>
+      <div class="team-member__info">
+        <h3 class="team-member__name">Rita Seara</h3>
+        <p class="team-member__position">Immigration Consultant</p>
+        <hr class="divider">
+        <div class="team-member__bio">
+          <p>
+            My journey as an immigration lawyer began in 2016, working for a relocation company in Portugal.
+          </p>
+          <p>
+            In 2019, I decided to embark on the adventure of opening my own business, doing what I love and using my knowledge in immigration and relocation law to benefit my clients.
+          </p>
+          <p>
+            One of my greatest assets is my commitment to my clients, partners, and colleagues. Reliability and trust are paramount in this line of work.
+          </p>
+          <p>
+            To date, I have worked with and supported over one hundred clients in becoming citizens of Portugal. This includes all aspects of visa applications, real estate, taxes, and helping set up a new life in Portugal by finding the right place to live, suitable schools, and more.
+          </p>
+          <p>
+            While the laws are straightforward, each client's case is unique. My dedication to helping and supporting each individual is my highest priority.
+          </p>
+          <p>
+            With clients moving to Portugal from all around the world, I am happy and eager to make each one feel at home in this beautiful country from the start.
+          </p>
+        </div>
+        <div class="team-member__education">
+          <ul>
+            <li>Master's Degree, Civil and Commercial Law | Universidade Católica Portuguesa</li>
+            <li>Law Degree | Universidade Católica Portuguesa</li>
+            <li>Member of the Portuguese Bar Association</li>
+          </ul>
+        </div>
+        <div class="team-member__social">
+          <a href="mailto:rita.seara@expatmile.com" aria-label="Email Rita Seara">
+            <i class="icon-mail"></i>
+          </a>
+          <a href="http://linkedin.com/in/rita-seara-61033a90" target="_blank" rel="noopener" aria-label="LinkedIn Profile of Rita Seara">
+            <i class="icon-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Team Member 2: Bárbara Okuda -->
+    <article class="team-member">
+      <figure class="team-member__image">
+        <img
+          src="https://expatmile.com/wp-content/uploads/2024/02/1616327956553-e1707695675336.jpg#229"
+          alt="Portrait of Bárbara Okuda with dark hair and glasses in a business suit"
+          width="592"
+          height="800"
+          loading="lazy"
+        >
+      </figure>
+      <div class="team-member__info">
+        <h3 class="team-member__name">Bárbara Okuda</h3>
+        <p class="team-member__position">Immigration Consultant</p>
+        <hr class="divider">
+        <div class="team-member__bio">
+          <p>
+            Originally Brazilian, my journey in Portugal began in 2014 when I initiated my Law degree.
+          </p>
+          <p>
+            As a lawyer, I am dedicated to making life easier for those who need help to face a path similar to mine—away from home!
+          </p>
+          <p>
+            Relocating is never an easy task. No one should go through this alone.
+          </p>
+          <p>
+            Working with Rita is a truly joyful adventure. We are a team committed to people and great results.
+          </p>
+          <p>
+            Identifying the different perspectives of each client is the best way to do our work. Realizing that we can help change their lives in a safe and confident environment makes it all worthwhile!
+          </p>
+        </div>
+        <div class="team-member__education">
+          <ul>
+            <li>Master’s Degree, Law and Management | Nova School of Law and Nova SBE</li>
+            <li>Law Degree | Universidade de Coimbra</li>
+            <li>Member of the Portuguese Bar Association</li>
+          </ul>
+        </div>
+        <div class="team-member__social">
+          <a href="mailto:barbara.okuda@expatmile.com" aria-label="Email Bárbara Okuda">
+            <i class="icon-mail"></i>
+          </a>
+          <a href="http://linkedin.com/in/bárbara-okuda-de-oliveira-166089163" target="_blank" rel="noopener" aria-label="LinkedIn Profile of Bárbara Okuda">
+            <i class="icon-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="contact-section">
+  <div>
+    <header id="contact-header">
+      <h2>Contact Us</h2>
+    </header>
+    <div class="container-section-wrapper">
+      <div class="address-contact">
+        <h3>Expat Mile</h3>
+        <address>
+          Av. 5 de Outubro, 102, 2.º<br>
+          1050-060 Lisboa<br>
+          Portugal
+        </address>
+      </div>
+  <main id="contact-content">
+        <div class="contact-form-container">
+          <form action="/about-us/#wpcf7-f43-p29-o1" method="post" aria-label="Contact form" novalidate="novalidate" data-status="init">
+            <!-- Hidden Fields -->
+            <div>
+              <input type="hidden" name="_wpcf7" value="43">
+              <input type="hidden" name="_wpcf7_version" value="6.0.1">
+              <input type="hidden" name="_wpcf7_locale" value="en_US">
+              <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f43-p29-o1">
+              <input type="hidden" name="_wpcf7_container_post" value="29">
+              <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+            </div>
+
+            <!-- Form Fields -->
+            <div>
+              <label for="your-name">Your Name</label>
+              <input id="your-name" name="your-name" type="text" required>
+            </div>
+
+            <div>
+              <label for="your-email">Your E-mail</label>
+              <input id="your-email" name="your-email" type="email"  required>
+            </div>
+
+            <div>
+              <label for="your-nationality">Nationality</label>
+              <input id="your-nationality" name="your-nationality" type="text"  required>
+            </div>
+
+            <div>
+              <label for="your-country">Country of Residence</label>
+              <input id="your-country" name="your-country" type="text" required>
+            </div>
+
+            <div>
+              <label for="your-subject">Subject</label>
+              <input id="your-subject" name="your-subject" type="text" >
+            </div>
+
+            <div>
+              <label for="your-message">Message</label>
+              <textarea id="your-message" name="your-message" rows="4" maxlength="2000"></textarea>
+            </div>
+
+            <!-- <div>
+              <input type="checkbox" id="acceptance-802" name="acceptance-802" value="1" aria-invalid="false">
+              <label for="acceptance-802">
+                Accept the <a href="https://expatmile.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.
+              </label>
+            </div> -->
+
+            <div>
+              <button type="submit">Send a message</button>
+              <span class="spinner"></span>
+            </div>
+          </form>
+        </div>
+      </main>
+      <div class="additional-info">
+        <h3>You are welcome</h3>
+        <p>
+          Are you an expat moving to Portugal? Do you need help reuniting with your family? Do you own a company abroad and would like a mobility partner in Portugal? Book a free consultation with our experts to find out all the necessary steps.
+        </p>
+      </div>   
+    </div>
+  </div>
+</section>

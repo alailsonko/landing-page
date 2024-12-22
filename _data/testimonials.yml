@@ -1,0 +1,17 @@
+- name: "John Doe"
+  image: "/assets/images/testimonials/john-doe.jpg"
+  location: "USA"
+  content: >
+    Moving to Portugal was a big step for our family. Rita and Barbara guided us through every step of the process. Not only did they help us with the legal aspects, but they also made us feel at home. We are forever grateful!
+    
+- name: "Jane Smith"
+  image: "/assets/images/testimonials/jane-smith.jpg"
+  location: "Canada"
+  content: >
+    I never imagined relocating would be this smooth. The team at Expat Mile took all the stress off my shoulders. I arrived with my family and felt like we were welcomed by old friends.
+    
+- name: "Carlos Santos"
+  image: "/assets/images/testimonials/carlos-santos.jpg"
+  location: "Brazil"
+  content: >
+    Exceptional service, personal touch, and genuine care. With Expat Mile, the immigration process was transformed from a bureaucratic nightmare into a journey filled with hope and excitement.

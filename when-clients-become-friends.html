@@ -1,0 +1,331 @@
+---
+layout: default
+title: When Clients Become Friends
+permalink: /when-clients-become-friends/
+---
+
+<style>
+  #contact-header {
+    text-align: center;
+    color: #825339;
+  }
+
+  .container-section-wrapper {
+    display: flex!important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .address-contact, #contact-content, .additional-info {
+    flex: 1;
+    min-width: 0; /* Ensures flex items shrink properly */
+  }
+
+  .contact-section {
+    background: url('{{ '/assets/images/cover-image.png' | relative_url }}') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 60px 20px;
+  }
+  .contact-section h2, .contact-section h3 {
+    font-family: 'Patua One', sans-serif;
+  }
+  .contact-section address, .contact-section p {
+    font-size: 1.1em;
+  }
+  .contact-form-container {
+    /* background: rgba(0, 0, 0, 0.7); */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .contact-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .contact-form-container input, .contact-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  .contact-form-container button {
+    background-color: #825339;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .contact-form-container button:hover {
+    background-color: #a65b3f;
+  }
+  .additional-info {
+    margin-top: 20px;
+  }
+  .address-contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 0; /* Ensures flex items shrink properly */
+  }
+
+  h3, p, address, label {
+    color: #444444;
+  }
+
+  .cover-container-3 {
+    background-color: white;
+    padding: 350px 20px;
+    text-align: center;
+    position: relative;
+  }
+  .icons-container {
+    gap: 50px;
+  }
+  .icon-item {
+    background: url('{{ '/assets/images/cover-image.png' | relative_url }}') no-repeat center center;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .icon-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .icon-content h3 {
+    font-family: 'Patua One', sans-serif;
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #444444;
+  }
+  .icon-content p {
+    font-size: 0.9em;
+    color: #444444;
+  }
+  #contact-header {
+    text-align: center;
+    color: #825339;
+  }
+
+  .container-section-wrapper {
+    display: flex!important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .address-contact, #contact-content, .additional-info {
+    flex: 1;
+    min-width: 0; /* Ensures flex items shrink properly */
+  }
+
+  .contact-section {
+    background: url('{{ '/assets/images/cover-image.png' | relative_url }}') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 60px 20px;
+  }
+  .contact-section h2, .contact-section h3 {
+    font-family: 'Patua One', sans-serif;
+  }
+  .contact-section address, .contact-section p {
+    font-size: 1.1em;
+  }
+  .contact-form-container {
+    /* background: rgba(0, 0, 0, 0.7); */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .contact-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .contact-form-container input, .contact-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  .contact-form-container button {
+    background-color: #825339;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .contact-form-container button:hover {
+    background-color: #a65b3f;
+  }
+  .additional-info {
+    margin-top: 20px;
+  }
+  .address-contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 0; /* Ensures flex items shrink properly */
+  }
+
+  h3, p, address, label {
+    color: #444444;
+  }
+
+  .cover-container-2 {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .cover-image-2 {
+    width: 100%;
+    height: auto;
+  }
+  .cover-text {
+    font-family: 'Patua One', sans-serif;
+    font-size: 2em;
+    margin: 20px 0;
+    color: #444;
+  }
+  .swiper-container {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .swiper-slide {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .swiper-text {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  .testimonial-author {
+    font-weight: bold;
+    color: #333;
+  }
+  .testimonial-country {
+    color: #777;
+  }
+  .swiper-pagination, .swiper-button-next, .swiper-button-prev {
+    color: #444;
+  }
+</style>
+
+<div id="Subheader">
+  <h1>When clients become friends</h1>
+</div>
+<div class="cover-container">
+    <img src="{{ '/assets/images/cover-image.png' | relative_url }}" alt="Cover Image" class="cover-image">
+    <div class="overlay-content">
+      <img src="https://expatmile.com/wp-content/uploads/2023/07/Bird-300x196.png" alt="Bird Image">
+      <h3>We currently have partners in Portugal and European countries, Asia, and the Middle East.
+
+        If you feel you would like to establish a partnership with Expat Mile, do contact us!
+        
+        We would be glad to discuss the terms with you.
+        
+        Go the extra mile with us!</h3>
+    </div>
+</div>
+{% include testimonials.html %}
+<section class="contact-section">
+    <div>
+      <header id="contact-header">
+        <h2>Contact Us</h2>
+      </header>
+      <div class="container-section-wrapper">
+        <div class="address-contact">
+          <h3>Expat Mile</h3>
+          <address>
+            Av. 5 de Outubro, 102, 2.º<br>
+            1050-060 Lisboa<br>
+            Portugal
+          </address>
+        </div>
+    <main id="contact-content">
+          <div class="contact-form-container">
+            <form action="/about-us/#wpcf7-f43-p29-o1" method="post" aria-label="Contact form" novalidate="novalidate" data-status="init">
+              <!-- Hidden Fields -->
+              <div>
+                <input type="hidden" name="_wpcf7" value="43">
+                <input type="hidden" name="_wpcf7_version" value="6.0.1">
+                <input type="hidden" name="_wpcf7_locale" value="en_US">
+                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f43-p29-o1">
+                <input type="hidden" name="_wpcf7_container_post" value="29">
+                <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+              </div>
+  
+              <!-- Form Fields -->
+              <div>
+                <label for="your-name">Your Name</label>
+                <input id="your-name" name="your-name" type="text" required>
+              </div>
+  
+              <div>
+                <label for="your-email">Your E-mail</label>
+                <input id="your-email" name="your-email" type="email"  required>
+              </div>
+  
+              <div>
+                <label for="your-nationality">Nationality</label>
+                <input id="your-nationality" name="your-nationality" type="text"  required>
+              </div>
+  
+              <div>
+                <label for="your-country">Country of Residence</label>
+                <input id="your-country" name="your-country" type="text" required>
+              </div>
+  
+              <div>
+                <label for="your-subject">Subject</label>
+                <input id="your-subject" name="your-subject" type="text" >
+              </div>
+  
+              <div>
+                <label for="your-message">Message</label>
+                <textarea id="your-message" name="your-message" rows="4" maxlength="2000"></textarea>
+              </div>
+  
+              <!-- <div>
+                <input type="checkbox" id="acceptance-802" name="acceptance-802" value="1" aria-invalid="false">
+                <label for="acceptance-802">
+                  Accept the <a href="https://expatmile.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.
+                </label>
+              </div> -->
+  
+              <div>
+                <button type="submit">Send a message</button>
+                <span class="spinner"></span>
+              </div>
+            </form>
+          </div>
+        </main>
+        <div class="additional-info">
+          <h3>You are welcome</h3>
+          <p>
+            Are you an expat moving to Portugal? Do you need help reuniting with your family? Do you own a company abroad and would like a mobility partner in Portugal? Book a free consultation with our experts to find out all the necessary steps.
+          </p>
+        </div>   
+      </div>
+    </div>
+  </section>

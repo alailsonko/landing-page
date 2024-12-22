@@ -4,11 +4,16 @@
         <div class="logo">
             <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
         </div>
+        <div class="hamburger" onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-links">
             <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
             <li><a href="{{ '/about-us/' | relative_url }}" {% if page.url contains 'about-us' %}class="active"{% endif %}>About Us</a></li>
             <li><a href="{{ '/what-we-offer/' | relative_url }}" {% if page.url contains 'what-we-offer' %}class="active"{% endif %}>What We Offer</a></li>
-            <li><a href="{{ '/clients/' | relative_url }}" {% if page.url contains 'clients' %}class="active"{% endif %}>When Clients Become Friends</a></li>
+            <li><a href="{{ '/when-clients-become-friends/' | relative_url }}" {% if page.url contains 'clients' %}class="active"{% endif %}>When Clients Become Friends</a></li>
             <li><a href="{{ '/insights-news/' | relative_url }}" {% if page.url contains 'insights-news' %}class="active"{% endif %}>Insights & News</a></li>
             <li><a href="{{ '/contact-us/' | relative_url }}" {% if page.url contains 'contact-us' %}class="active"{% endif %}>Contact Us</a></li>
         </ul>
@@ -21,14 +26,33 @@
         <div class="logo">
             <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
         </div>
+        <!-- <div class="hamburger" onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> -->
         <ul class="nav-links">
             <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
             <li><a href="{{ '/about-us/' | relative_url }}" {% if page.url contains 'about-us' %}class="active"{% endif %}>About Us</a></li>
             <li><a href="{{ '/what-we-offer/' | relative_url }}" {% if page.url contains 'what-we-offer' %}class="active"{% endif %}>What We Offer</a></li>
-            <li><a href="{{ '/clients/' | relative_url }}" {% if page.url contains 'clients' %}class="active"{% endif %}>When Clients Become Friends</a></li>
+            <li><a href="{{ '/when-clients-become-friends/' | relative_url }}" {% if page.url contains 'clients' %}class="active"{% endif %}>When Clients Become Friends</a></li>
             <li><a href="{{ '/insights-news/' | relative_url }}" {% if page.url contains 'insights-news' %}class="active"{% endif %}>Insights & News</a></li>
             <li><a href="{{ '/contact-us/' | relative_url }}" {% if page.url contains 'contact-us' %}class="active"{% endif %}>Contact Us</a></li>
         </ul>
         </nav>
     </div>
 </nav>
+
+<div id="mobile-nav" class="mobile-nav">
+    <div class="close-btn" onclick="toggleMobileNav()">
+        &#10005; <!-- Unicode character for 'X' -->
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ '/about-us/' | relative_url }}" {% if page.url contains 'about-us' %}class="active"{% endif %}>About Us</a></li>
+        <li><a href="{{ '/what-we-offer/' | relative_url }}" {% if page.url contains 'what-we-offer' %}class="active"{% endif %}>What We Offer</a></li>
+        <li><a href="{{ '/when-clients-become-friends/' | relative_url }}" {% if page.url contains 'clients' %}class="active"{% endif %}>When Clients Become Friends</a></li>
+        <li><a href="{{ '/insights-news/' | relative_url }}" {% if page.url contains 'insights-news' %}class="active"{% endif %}>Insights & News</a></li>
+        <li><a href="{{ '/contact-us/' | relative_url }}" {% if page.url contains 'contact-us' %}class="active"{% endif %}>Contact Us</a></li>
+    </ul>
+</div>

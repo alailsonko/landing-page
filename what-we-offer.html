@@ -1,0 +1,207 @@
+---
+layout: default
+title: What we offer
+permalink: /what-we-offer/
+---
+
+<style>
+  #contact-header {
+    text-align: center;
+    color: #825339;
+  }
+
+  .container-section-wrapper {
+    display: flex!important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .address-contact, #contact-content, .additional-info {
+    flex: 1;
+    min-width: 0; /* Ensures flex items shrink properly */
+  }
+
+  .contact-section {
+    background: url('{{ '/assets/images/cover-image.png' | relative_url }}') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 60px 20px;
+  }
+  .contact-section h2, .contact-section h3 {
+    font-family: 'Patua One', sans-serif;
+  }
+  .contact-section address, .contact-section p {
+    font-size: 1.1em;
+  }
+  .contact-form-container {
+    /* background: rgba(0, 0, 0, 0.7); */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .contact-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .contact-form-container input, .contact-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  .contact-form-container button {
+    background-color: #825339;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .contact-form-container button:hover {
+    background-color: #a65b3f;
+  }
+  .additional-info {
+    margin-top: 20px;
+  }
+  .address-contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 0; /* Ensures flex items shrink properly */
+  }
+
+  h3, p, address, label {
+    color: #444444;
+  }
+
+  .cover-container-3 {
+    background-color: white;
+    padding: 350px 20px;
+    text-align: center;
+    position: relative;
+  }
+  .icons-container {
+    gap: 50px;
+  }
+  .icon-item {
+    background: url('{{ '/assets/images/cover-image.png' | relative_url }}') no-repeat center center;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .icon-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .icon-content h3 {
+    font-family: 'Patua One', sans-serif;
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #444444;
+  }
+  .icon-content p {
+    font-size: 0.9em;
+    color: #444444;
+  }
+</style>
+
+<div id="Subheader">
+  <h1>What we offer</h1>
+</div>
+<div class="cover-container">
+    <img src="{{ '/assets/images/cover-image.png' | relative_url }}" alt="Cover Image" class="cover-image">
+    <div class="overlay-content">
+      <img src="https://expatmile.com/wp-content/uploads/2023/07/Bird-300x196.png" alt="Bird Image">
+      <h3>We provide full support with everything you'll need when moving to Portugal.</h3>
+    </div>
+</div>
+<div>
+  <div class="cover-container-3">
+  <div class="icons-container">
+    <div class="icon-item">
+      <img src="{{ '/assets/images/general-consulting-icon.png' | relative_url }}" alt="general-consulting-icon">
+      <div class="icon-content">
+        <h3>General Consulting</h3>
+        <p>Book a consultation with our experts to find out everything you'll need before moving to Portugal.</p>
+      </div>
+    </div>
+    <div class="icon-item">
+      <img src="{{ '/assets/images/translations-icon.png' | relative_url }}" alt="translations-icon">
+      <div class="icon-content">
+        <h3>Translations</h3>
+        <p>English to Portuguese and Portuguese to English translations and interpreting services.</p>
+      </div>
+    </div>
+    <div class="icon-item">
+      <img src="{{ '/assets/images/language-icon.png' | relative_url }}" alt="language-icon">
+      <div class="icon-content">
+        <h3>Language Courses</h3>
+        <p>Feeling overwhelmed by the Portuguese language? Hard time fitting in with coworkers?</p>
+      </div>
+    </div>
+    <div class="icon-item">
+      <img src="{{ '/assets/images/real-estate-icon.png' | relative_url }}" alt="real-estate-icon">
+      <div class="icon-content">
+        <h3>Real Estate</h3>
+        <p>The best housing solution for individuals or families.</p>
+      </div>
+    </div>
+    <div class="icon-item">
+      <img src="{{ '/assets/images/relocation-icon.png' | relative_url }}" alt="relocation-icon">
+      <div class="icon-content">
+        <h3>Relocation</h3>
+        <p>Rental or purchase we do all the best to make you feel at home with minimum effort.</p>
+      </div>
+    </div>
+    <div class="icon-item">
+      <img src="{{ '/assets/images/passport-icon.png' | relative_url }}" alt="passport-icon">
+      <div class="icon-content">
+        <h3>Immigration Consulting</h3>
+        <p>Personalized, face-to-face solution for your Visas and more provided by an immigration lawyer.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="cover-container-2">
+  <img src="{{ '/assets/images/cover-image.png' | relative_url }}" alt="Cover Image" class="cover-image-2">
+  <div class="cover-text">TESTIMONIALS</div>
+  <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <p class="swiper-text">"Moving to Portugal seemed daunting at first, but Rita made the entire immigration process smooth and stress-free. Her expertise and attention to detail were invaluable. I'm now happily settled in Porto and couldn't have done it without her guidance."</p>
+              <p class="testimonial-author">Michael Anderson</p>
+              <p class="testimonial-country">United States</p>
+          </div>
+          <div class="swiper-slide">
+              <p class="swiper-text">"As a digital nomad, I needed someone who understood the D7 visa process inside and out. Rita's responsiveness and thorough knowledge of Portuguese immigration law made all the difference. She turned a complex process into manageable steps."</p>
+              <p class="testimonial-author">Sophie Laurent</p>
+              <p class="testimonial-country">France</p>
+          </div>
+          <div class="swiper-slide">
+              <p class="swiper-text">"Quando decidimos nos mudar para Portugal, precisávamos de alguém confiável e experiente. Rita não só nos ajudou com toda documentação, mas também nos deu dicas valiosas sobre a vida em Lisboa. Somos muito gratos por todo o suporte."</p>
+              <p class="testimonial-author">Carlos Santos</p>
+              <p class="testimonial-country">Brasil</p>
+          </div>
+          <!-- Add more slides as needed -->
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </div>
+</div>
